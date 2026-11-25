@@ -1,0 +1,70 @@
+/* Windows 95 look: fixed system colors, no rounding, beveled 3D edges. */
+.window {
+  position: fixed;
+  min-width: 160px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  background: #c0c0c0;
+  color: #000;
+  box-shadow:
+    inset -1px -1px #0a0a0a,
+    inset 1px 1px #dfdfdf,
+    inset -2px -2px #808080,
+    inset 2px 2px #fff;
+  font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Tahoma, sans-serif;
+  font-size: 11px;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.window-titlebar {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  padding: 0 3px;
+  background: #000080;
+  cursor: default;
+  /* Stops text selection and touch scrolling from hijacking the drag. */
+  user-select: none;
+  touch-action: none;
+}
+
+.window-title {
+  font-weight: bold;
+  color: #fff;
+}
+
+.window-body {
+  padding: 8px;
+}
+
+.window-body p {
+  margin: 0;
+}
+
+.window-close {
+  margin-left: auto;
+  width: 16px;
+  height: 14px;
+  padding: 0;
+  border: none;
+  background: #c0c0c0;
+  color: #000;
+  font: bold 12px/1 sans-serif;
+  box-shadow:
+    inset -1px -1px #0a0a0a,
+    inset 1px 1px #fff,
+    inset -2px -2px #808080,
+    inset 2px 2px #dfdfdf;
+}
+
+.window-close:active {
+  box-shadow:
+    inset -1px -1px #fff,
+    inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf,
+    inset 2px 2px #808080;
+}

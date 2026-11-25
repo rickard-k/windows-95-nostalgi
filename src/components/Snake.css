@@ -1,0 +1,107 @@
+.snake {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px;
+  background: #c0c0c0;
+  user-select: none;
+  /* Raised outer frame, matching the window. */
+  box-shadow:
+    inset 2px 2px #fff,
+    inset -2px -2px #808080;
+}
+
+.snake-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  /* Sunken panel. */
+  box-shadow:
+    inset 2px 2px #808080,
+    inset -2px -2px #fff;
+}
+
+/* Red seven-segment style readout on black. */
+.snake-counter {
+  min-width: 39px;
+  padding: 0 2px;
+  background: #000;
+  color: #f00;
+  font: bold 20px/24px 'Courier New', monospace;
+  text-align: center;
+}
+
+.snake-face {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  background: #c0c0c0;
+  font-size: 14px;
+  line-height: 1;
+  box-shadow:
+    inset -1px -1px #0a0a0a,
+    inset 1px 1px #fff,
+    inset -2px -2px #808080,
+    inset 2px 2px #dfdfdf;
+}
+
+.snake-face:active {
+  box-shadow:
+    inset 1px 1px #808080,
+    inset -1px -1px #808080;
+}
+
+.snake-board {
+  position: relative;
+  display: grid;
+  background: #000;
+  border: 3px solid;
+  border-color: #808080 #fff #fff #808080;
+  outline: none;
+}
+
+/* Dotted focus ring, as Windows 95 drew it. */
+.snake-board:focus-visible {
+  outline: 1px dotted #000;
+  outline-offset: 1px;
+}
+
+.snake-cell {
+  width: 12px;
+  height: 12px;
+}
+
+.snake-cell[data-kind='body'] {
+  background: #008000;
+  box-shadow: inset -1px -1px #004000;
+}
+
+.snake-cell[data-kind='head'] {
+  background: #00ff00;
+  box-shadow: inset -1px -1px #008000;
+}
+
+.snake-cell[data-kind='food'] {
+  background: #f00;
+  box-shadow: inset -1px -1px #800000;
+}
+
+.snake-message {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  padding: 4px 8px;
+  background: #c0c0c0;
+  color: #000;
+  font: 11px 'MS Sans Serif', 'Microsoft Sans Serif', Tahoma, sans-serif;
+  box-shadow:
+    inset -1px -1px #0a0a0a,
+    inset 1px 1px #fff,
+    inset -2px -2px #808080,
+    inset 2px 2px #dfdfdf;
+  pointer-events: none;
+}
