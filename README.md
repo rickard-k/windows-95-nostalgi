@@ -2,6 +2,8 @@
 
 A small Windows 95–style desktop in the browser, built with React, TypeScript and Vite. Double-click an icon on the desktop to open it in a window you can drag by its title bar.
 
+**[Play it live](https://rickard-k.github.io/windows-95-nostalgi/)**
+
 ## What's on the desktop
 
 - **Minesweeper.exe**: a 9×9 board with 10 mines. Left-click reveals a cell and right-click places a flag. Your first click is never a mine. Click the smiley to start a new game.
